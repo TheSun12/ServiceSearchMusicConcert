@@ -1,0 +1,44 @@
+body{
+    background: url("concert.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#entry{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 1300px;
+    font-size: 28px;
+}
+
+h1{
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 200px;
+    margin-top: 20px;
+    font-size: 62px;
+    color:#ffffff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.btn-outline-light{   /*удалить после создания всех ссылок в кнопках*/
+    font-size: 40px;
+    color:#ffffff; 
+    text-shadow: 1px 1px 1px #000;
+    border-width: 5px;
+}
+
+a{
+    color:#ffffff;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#group-left{
+    margin-left: 575px;
+    margin-top: 50px;
+}
