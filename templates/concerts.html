@@ -1,0 +1,18 @@
+{% extends 'result_concert.html' %}
+{% block title %}
+Результат
+{% endblock %}
+{% block content %}
+{% for element in concerts %}
+    <div class="conc">
+        <h3>{{element[1]}}</h3>
+        <p>Исполнитель: {{element[10]}}</p>
+        <p>Место проведения: {{element[16]}}</p>
+        <p>Дата: {{element[4]}}</p>
+        <p>Время: {{element[5]}}</p>
+        <p>Возрастные ограничения: {{element[6]}}</p>
+        <p>Свободных мест: {{element[7]}}</p>
+        <p>Цена: {{element[8]}}</p>
+    </div>
+{% endfor %}
+{% endblock %}

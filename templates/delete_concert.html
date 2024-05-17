@@ -1,0 +1,17 @@
+{% extends 'shablon_concert.html' %}
+{% block title %}
+Результат
+{% endblock %}
+{% block content %}
+    <div class="conc">
+        <!--<p>Удален концерт</p>-->
+        <h3>{{element[1]}} - {{element[0]}}</h3>
+        <p>Исполнитель: {{element[10]}}</p>
+        <p>Место проведения: {{element[16]}}</p>
+        <p>Дата: {{element[4]}}</p>
+        <p>Время: {{element[5]}}</p>
+        <p>Возрастные ограничения: {{element[6]}}</p>
+        <p>Свободных мест: {{element[7]}}</p>
+        <p>Цена: {{element[8]}}</p>
+    </div>
+{% endblock %}

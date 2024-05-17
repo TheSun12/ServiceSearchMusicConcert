@@ -1,0 +1,14 @@
+{% extends 'result_singer.html' %}
+{% block title %}
+Результат
+{% endblock %}
+{% block content %}
+{% for element in singers %}
+    <div class="conc">
+        <h3>{{element[1]}}</h3>
+        <p>Жанр: {{element[8]}}</p>
+        <p>Страна: {{element[6]}}</p>
+        <p>{{element[4]}}</p>
+    </div>
+{% endfor %}
+{% endblock %}

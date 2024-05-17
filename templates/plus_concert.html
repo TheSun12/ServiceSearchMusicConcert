@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style_adm_concert.css') }}">
+    <title>Поиск музыкальных концертов в России</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="static/styles/home.png" alt="" class="image"/></a>
+        </div>
+        <div class="nav">
+            <button type="button" class="btn btn-info" id="entry"><a href="/login">Вход</a></button>
+        </div>
+    </header>
+
+    <h2>Панель администратора</h2>
+
+    <form method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Название концерта</label>
+            <br><input name="nameConcert" type="text" size="60%">
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Исполнитель</label>
+            <br><input name="singer" type="text" size="60%">
+            <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>-->
+        </div>
+    
+        <div class="mb-3">
+            <label for="exampleDataList" class="form-label">Город</label>
+            <input class="form-control" name="town" list="datalistOptions" id="exampleDataList" placeholder="Введите для поиска...">
+            <datalist id="datalistOptions">
+            <option value="Москва">
+            <option value="Санкт-Петербург">
+            <option value="Саратов">
+            <option value="Екатеринбург">
+            <option value="Волгоград">
+            </datalist>
+        </div>
+    
+        <div class="mb-3">
+            <label for="date">Дата: </label>
+            <input type="date" id="date" name="date"/>
+    
+            <label for="time">Время: </label>
+            <input type="time" id="time" name="time"/>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleDataList" class="form-label">Возрастные ограничения</label>
+            <input class="form-control" name="age" list="datalistOptions1" id="exampleDataList1" placeholder="Введите для поиска...">
+            <datalist id="datalistOptions1">
+            <option value="0+">
+            <option value="6+">
+            <option value="12+">
+            <option value="16+">
+            <option value="18+">
+            </datalist>
+        </div>
+    
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Место проведения</label>
+            <br><input name="place" type="text" size="60%">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Количество мест</label>
+            <br><input name="seats" type="text" size="60%">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Цена за билет</label>
+            <br><input name="price" type="text" size="60%">
+        </div>
+
+        <div id="btn-search">
+            <button type="submit" class="btn btn-primary">Добавить</button> 
+        </div>
+    </form>
+
+    <img src="static/styles/concert-clipart.png" class="image-clipart">
+
+</body>
+</html>
